@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator — FitTrack</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="nav-wrap">
+    
+    <a href="index.html" class="logo">
+      <span class="logo-badge"><i class="fa-solid fa-leaf"></i></span>
+      FitTrack
+    </a>
+
+    <button class="nav-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html" class="active">Calculator</a></li>
+      <li><a href="diet.html">Diet</a></li>
+      <li><a href="workout.html">Workout</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="calc-hero">
+  <div class="container">
+    <h1>Calorie & BMI <em>Calculator</em></h1>
+    <p class="hero-sub">Enter your details and get your fitness numbers instantly.</p>
+  </div>
+</section>
+
+<!-- ===== MAIN ===== -->
+<div class="container calc-grid">
+
+  <!-- LEFT: FORM -->
+  <form id="calcForm" class="calc-form">
+
+    <h3><i class="fa-solid fa-user"></i> Your Details</h3>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Weight (kg)</label>
+        <input type="number" id="weight" placeholder="70">
+      </div>
+
+      <div class="form-group">
+        <label>Height (cm)</label>
+        <input type="number" id="height" placeholder="175">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number" id="age" placeholder="20">
+    </div>
+
+    <!-- Gender -->
+    <div class="form-group">
+      <label>Gender</label>
+      <div class="segmented">
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label>
+      </div>
+    </div>
+
+    <!-- Activity -->
+    <div class="form-group">
+      <label>Activity Level</label>
+      <select id="activity">
+        <option value="">Select</option>
+        <option value="sedentary">Sedentary</option>
+        <option value="moderate">Moderate</option>
+        <option value="active">Active</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Calculate <i class="fa-solid fa-calculator"></i>
+    </button>
+
+    <div id="errorMsg" class="error-msg"></div>
+
+  </form>
+
+  <!-- RIGHT: RESULTS -->
+  <div class="results-wrapper">
+
+    <h3 class="results-title">
+      <i class="fa-solid fa-chart-line"></i> Your Results
+    </h3>
+
+    <div id="resultsPanel" class="results-panel">
+      <div class="result-empty">
+       
+        <p>Your results will appear here.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      © 2026 FitTrack — College Project
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<body class="calc-page"></body>
+</body>
+</html>

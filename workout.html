@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Plan — FitTrack</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="nav-wrap">
+    
+    <a href="index.html" class="logo">
+      <span class="logo-badge"><i class="fa-solid fa-leaf"></i></span>
+      FitTrack
+    </a>
+
+    <button class="nav-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="diet.html">Diet</a></li>
+      <li><a href="workout.html" class="active">Workout</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="workout-hero">
+  <div class="container">
+    <h1>Weekly <em>Workout Plan</em></h1>
+    <p class="hero-sub">4-day split for strength, muscle and fat loss.</p>
+  </div>
+</section>
+
+<!-- ===== TABS ===== -->
+<div class="container">
+  <div class="day-tabs">
+    <button class="day-tab active" data-day="all">All</button>
+    <button class="day-tab" data-day="mon">Day 1</button>
+    <button class="day-tab" data-day="tue">Day 2</button>
+    <button class="day-tab" data-day="wed">Day 3</button>
+    <button class="day-tab" data-day="thu">Day 4</button>
+  </div>
+
+  <!-- ===== WORKOUT GRID ===== -->
+  <div class="workout-grid">
+
+    <!-- DAY 1 -->
+    <div class="workout-card" data-day="mon">
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&q=80">
+      <div class="workout-body">
+        <h3>Chest + Triceps</h3>
+        <ul class="exercise-list">
+          <li>Bench Press — 4×8</li>
+          <li>Incline Dumbbell Press — 3×10</li>
+          <li>Cable Fly — 3×12</li>
+          <li>Tricep Pushdown — 3×12</li>
+          <li>Overhead Extension — 3×10</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="workout-card" data-day="tue">
+      <img src="https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=800&q=80">
+      <div class="workout-body">
+        <h3>Back + Biceps</h3>
+        <ul class="exercise-list">
+          <li>Pull-ups — 4×8</li>
+          <li>Barbell Row — 4×8</li>
+          <li>Seated Row — 3×10</li>
+          <li>Bicep Curl — 3×10</li>
+          <li>Hammer Curl — 3×12</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="workout-card" data-day="wed">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80">
+      <div class="workout-body">
+        <h3>Shoulders + Abs</h3>
+        <ul class="exercise-list">
+          <li>Shoulder Press — 4×8</li>
+          <li>Lateral Raise — 4×12</li>
+          <li>Rear Delt Fly — 3×12</li>
+          <li>Leg Raises — 3×12</li>
+          <li>Crunches — 3×15</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="workout-card" data-day="thu">
+      <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&q=80">
+      <div class="workout-body">
+        <h3>Legs</h3>
+        <ul class="exercise-list">
+          <li>Squats — 4×8</li>
+          <li>Romanian Deadlift — 4×8</li>
+          <li>Leg Press — 3×10</li>
+          <li>Lunges — 3×12</li>
+          <li>Calf Raises — 4×15</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REST -->
+  <div class="rest-banner">
+    <div class="rest-header">
+      <span class="rest-icon">🛌</span>
+      <div>
+        <h3>Rest &amp; Recover</h3>
+        <p class="rest-sub">Your muscles grow when you rest — not when you train.</p>
+      </div>
+    </div>
+
+    <div class="rest-grid">
+
+      <div class="rest-card">
+        <span class="rest-card-icon">😴</span>
+        <h4>Sleep 7–9 Hours</h4>
+        <p>Growth hormone is released during deep sleep. Less sleep = slower gains and higher cortisol.</p>
+      </div>
+
+      <div class="rest-card">
+        <span class="rest-card-icon">💧</span>
+        <h4>Stay Hydrated</h4>
+        <p>Drink 3–4 litres of water daily. Muscles are 75% water — dehydration kills performance.</p>
+      </div>
+
+      <div class="rest-card">
+        <span class="rest-card-icon">🥩</span>
+        <h4>Eat Enough Protein</h4>
+        <p>Aim for 1.6–2g per kg of body weight to repair torn muscle fibres after training.</p>
+      </div>
+
+      <div class="rest-card">
+        <span class="rest-card-icon">🧘</span>
+        <h4>Active Recovery</h4>
+        <p>Light walks, yoga or stretching on rest days improves blood flow and reduces soreness.</p>
+      </div>
+
+      <div class="rest-card">
+        <span class="rest-card-icon">📅</span>
+        <h4>Take 2–3 Rest Days</h4>
+        <p>Overtraining leads to injury and burnout. Schedule rest as seriously as your workouts.</p>
+      </div>
+
+      <div class="rest-card">
+        <span class="rest-card-icon">🚫</span>
+        <h4>Avoid Junk & Alcohol</h4>
+        <p>Processed food and alcohol spike inflammation and slow down muscle recovery significantly.</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      © 2026 FitTrack — College Project
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

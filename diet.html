@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet Plan — FitTrack</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="nav-wrap">
+    
+    <a href="index.html" class="logo">
+      <span class="logo-badge"><i class="fa-solid fa-leaf"></i></span>
+      FitTrack
+    </a>
+
+    <button class="nav-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="diet.html" class="active">Diet</a></li>
+      <li><a href="workout.html">Workout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="diet-hero">
+  <div class="container center">
+    <span class="badge">🍃 Smart Diet Suggestion</span>
+
+    <h1>Eat to match <em>your goal.</em></h1>
+
+    <p class="hero-sub">
+      Pick your goal, tell us your weight and diet preference —
+      we'll build a simple Indian meal plan with a daily protein target.
+    </p>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="diet-card">
+
+    <h3>🎯 What's your goal?</h3>
+
+    <!-- GOAL -->
+    <div class="goal-grid">
+      <div class="goal-box" data-goal="loss">
+        🔥
+        <h4>Fat Loss</h4>
+        <p>Drop body fat</p>
+      </div>
+
+      <div class="goal-box" data-goal="maintain">
+        ⚖️
+        <h4>Maintain</h4>
+        <p>Stay the same</p>
+      </div>
+
+      <div class="goal-box" data-goal="gain">
+        💪
+        <h4>Muscle Gain</h4>
+        <p>Add lean mass</p>
+      </div>
+    </div>
+
+    <!-- INPUT -->
+    <div class="diet-inputs">
+
+      <div>
+        <label>Your weight (kg)</label>
+        <input type="number" id="dietWeight" placeholder="e.g. 65">
+      </div>
+
+      <div>
+        <label>Diet Type</label>
+        <div class="diet-type">
+          <button type="button" class="type-btn" data-type="veg">Vegetarian</button>
+          <button type="button" class="type-btn" data-type="nonveg">Non-Veg</button>
+        </div>
+      </div>
+
+      <div class="btn-box">
+        <button id="generateBtn" class="btn btn-primary">
+          Generate Plan →
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RESULT -->
+  <div id="dietResults"></div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      © 2026 FitTrack — College Project
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  if(typeof initDiet === "function"){
+    initDiet();
+  }
+});
+</script>
+</body>
+</html>
